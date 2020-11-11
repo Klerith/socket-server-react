@@ -25,6 +25,8 @@ class Server {
         this.app.use( express.static( path.resolve( __dirname, '../public' ) ) );
     }
 
+    // Esta configuración se puede tener aquí o como propieda de clase
+    // depende mucho de lo que necesites
     configurarSockets() {
         new Sockets( this.io );
     }
